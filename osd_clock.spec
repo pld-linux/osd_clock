@@ -16,7 +16,6 @@ BuildRequires:	XFree86-devel
 BuildRequires:	xosd-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-
 %description
 OSD clock designed for minimalist desktops. Cushy fly and speedy.
 
@@ -29,12 +28,17 @@ Zegar OSD stworzony dla minimalistycznych desktopów. Szybki i lekki.
 %patch1 -p1
 
 %build
-%{__make} CC="%{__cc}" CFLAGS="%{rpmcflags} -Wall -I. -DXOSD_VERSION=\"$(VERSION)\" -I/usr/X11R6/include"
+%{__make} \
+	CC="%{__cc}" \
+	CFLAGS="%{rpmcflags} -Wall -I. -DXOSD_VERSION=\"$(VERSION)\" -I/usr/X11R6/include"
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT PREFIX=%{_prefix} MANDIR=%{_mandir}
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT \
+	PREFIX=%{_prefix} \
+	MANDIR=%{_mandir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
