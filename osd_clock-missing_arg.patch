@@ -1,0 +1,11 @@
+--- osd_clock-0.5/osd_clock.c.orig	Fri Mar 14 00:14:35 2003
++++ osd_clock-0.5/osd_clock.c	Fri Mar 14 09:23:51 2003
+@@ -109,7 +109,7 @@
+     }
+   }
+   
+-  osd = xosd_init (font, color, delay, pos, offset, shadow);
++  osd = xosd_init (font, color, delay, pos, offset, shadow, 3);
+   if (!osd)
+   {
+     fprintf (stderr, "Error initializing osd\n");
