@@ -1,0 +1,16 @@
+--- ./Makefile.org	Tue Mar 27 18:38:52 2001
++++ ./Makefile	Sat Jul 13 17:22:58 2002
+@@ -37,9 +37,10 @@
+ tar: xosd-$(VERSION).tar.gz
+ 
+ install: all
+-	$(INSTALL) osd_clock $(BINDIR)
+-	mkdir -p $(MANDIR)/man1 $(MANDIR)/man3
+-	$(INSTALL_DATA) osd_clock.1 $(MANDIR)/man1/
++	$(INSTALL) -d $(DESTDIR)$(BINDIR)
++	$(INSTALL) -d $(DESTDIR)$(MANDIR)/man1
++	$(INSTALL) osd_clock $(DESTDIR)$(BINDIR)
++	$(INSTALL_DATA) osd_clock.1 $(DESTDIR)$(MANDIR)/man1/
+ 
+ clean:
+ 	rm -f *~ *.o *.o.pic osd_clock
