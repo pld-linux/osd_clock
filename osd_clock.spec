@@ -30,7 +30,7 @@ Zegar OSD stworzony dla minimalistycznych desktopów. Szybki i lekki.
 %build
 %{__make} \
 	CC="%{__cc}" \
-	CFLAGS="%{rpmcflags} -Wall -I. -DXOSD_VERSION=\"$(VERSION)\" -I/usr/X11R6/include"
+	CFLAGS="%{rpmcflags} -Wall -I. -DXOSD_VERSION=\\\"\$(VERSION)\\\" -I/usr/X11R6/include"
 
 %install
 rm -rf $RPM_BUILD_ROOT
