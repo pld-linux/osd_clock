@@ -4,13 +4,13 @@ Summary:	Minimalist on screen OSD clock for X11
 Summary(pl):	Minimalistyczny zegar OSD dla X11
 Name:		osd_clock
 Version:	0.5
-Release:	4
+Release:	5
 License:	GPL
 Group:		X11/Applications
 Source0:	http://leftorium.net/software/%{name}-%{version}.tar.gz
 # Source0-md5:	a6f30cc032336b34c10eb06602dc43ff
 Patch0:		%{name}-DESTDIR.patch
-Patch1:		%{name}-missing_arg.patch
+Patch1:		%{name}-0.5-xosd-2.0.patch
 URL:		http://leftorium.net/software.phtml
 BuildRequires:	XFree86-devel
 BuildRequires:	xosd-devel
