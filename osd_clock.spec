@@ -4,7 +4,7 @@ Summary:	Minimalist on screen OSD clock for X11
 Summary(pl):	Minimalistyczny zegar OSD dla X11
 Name:		osd_clock
 Version:	0.5
-Release:	3
+Release:	4
 License:	GPL
 Group:		X11/Applications
 Source0:	http://leftorium.net/software/%{name}-%{version}.tar.gz
@@ -29,15 +29,12 @@ Zegar OSD stworzony dla minimalistycznych desktopów. Szybki i lekki.
 %patch1 -p1
 
 %build
-%{__make}
+%{__make} CC="%{__cc}" CFLAGS="%{rpmcflags} -Wall -I. -DXOSD_VERSION=\"$(VERSION)\" -I/usr/X11R6/include"
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT PREFIX=%{_prefix} MANDIR=%{_mandir}
-
-%post	-p /sbin/ldconfig
-%postun	-p /sbin/ldconfig
 
 %clean
 rm -rf $RPM_BUILD_ROOT
