@@ -1,0 +1,21 @@
+diff -urN osd_clock-0.5.orig/Makefile osd_clock-0.5/Makefile
+--- osd_clock-0.5.orig/Makefile	2005-01-05 16:18:25.253957840 +0100
++++ osd_clock-0.5/Makefile	2005-01-05 16:19:31.081950464 +0100
+@@ -5,7 +5,7 @@
+ PREFIX=/usr/local
+ EXEC_PREFIX=$(PREFIX)
+ BINDIR=$(EXEC_PREFIX)/bin
+-LIBDIR=$(EXEC_PREFIX)/lib
++LIBDIR=$(EXEC_PREFIX)/lib64
+ MANDIR=$(PREFIX)/man
+ INCLUDEDIR=$(PREFIX)/include
+ 
+@@ -14,7 +14,7 @@
+ INSTALL_DATA=$(INSTALL) -m 644
+ 
+ CFLAGS=-O2 -Wall -pipe -I. -DXOSD_VERSION=\"$(VERSION)\" -I/usr/X11R6/include
+-LDFLAGS=-L. -L/usr/X11R6/lib -lX11 -lXext -lpthread -lXt
++LDFLAGS=-L. -L/usr/X11R6/lib64 -lX11 -lXext -lpthread -lXt
+ 
+ XOSDLIBS=-lxosd
+ 
