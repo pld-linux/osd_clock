@@ -14,7 +14,6 @@ BuildRequires:	XFree86-devel
 BuildRequires:	xosd-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
 
 %description
 OSD clock designed for minimalist desktops. Cushy fly and speedy.
