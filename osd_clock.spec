@@ -8,6 +8,7 @@ Release:	3
 License:	GPL
 Group:		X11/Applications
 Source0:	http://leftorium.net/software/%{name}-%{version}.tar.gz
+# Source0-md5:	a6f30cc032336b34c10eb06602dc43ff
 Patch0:		%{name}-DESTDIR.patch
 Patch1:		%{name}-missing_arg.patch
 URL:		http://leftorium.net/software.phtml
