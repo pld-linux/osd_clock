@@ -27,7 +27,7 @@ Zegar OSD stworzony dla minimalistycznych desktopów. Szybki i lekki.
 %setup -q
 %patch0 -p1
 %patch1 -p1
-%ifarch amd64
+%if "%{_lib}" == "lib64"
 %patch2 -p1
 %endif
 
