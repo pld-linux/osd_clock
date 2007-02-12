@@ -1,7 +1,7 @@
 # TODO:
 # - desktop file and icons
 Summary:	Minimalist on screen OSD clock for X11
-Summary(pl):	Minimalistyczny zegar OSD dla X11
+Summary(pl.UTF-8):   Minimalistyczny zegar OSD dla X11
 Name:		osd_clock
 Version:	0.5
 Release:	6
@@ -20,8 +20,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 OSD clock designed for minimalist desktops. Cushy fly and speedy.
 
-%description -l pl
-Zegar OSD stworzony dla minimalistycznych desktopów. Szybki i lekki.
+%description -l pl.UTF-8
+Zegar OSD stworzony dla minimalistycznych desktopÃ³w. Szybki i lekki.
 
 %prep
 %setup -q
