@@ -1,7 +1,7 @@
 # TODO:
 # - desktop file and icons
 Summary:	Minimalist on screen OSD clock for X11
-Summary(pl.UTF-8):   Minimalistyczny zegar OSD dla X11
+Summary(pl.UTF-8):	Minimalistyczny zegar OSD dla X11
 Name:		osd_clock
 Version:	0.5
 Release:	6
