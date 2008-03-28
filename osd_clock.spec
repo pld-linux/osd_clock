@@ -13,7 +13,6 @@ Patch0:		%{name}-DESTDIR.patch
 Patch1:		%{name}-0.5-xosd-2.0.patch
 Patch2:		%{name}-amd64.patch
 URL:		http://leftorium.net/software.phtml
-BuildRequires:	XFree86-devel
 BuildRequires:	xosd-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -34,7 +33,8 @@ Zegar OSD stworzony dla minimalistycznych desktopów. Szybki i lekki.
 %build
 %{__make} \
 	CC="%{__cc}" \
-	CFLAGS="%{rpmcflags} -Wall -I. -DXOSD_VERSION=\\\"\$(VERSION)\\\" -I/usr/X11R6/include"
+	CFLAGS="%{rpmcflags} -Wall -I. " \
+	LDFLAGS=""
 
 %install
 rm -rf $RPM_BUILD_ROOT
