@@ -24,10 +24,10 @@ Zegar OSD stworzony dla minimalistycznych desktopów. Szybki i lekki.
 
 %prep
 %setup -q
-%patch0 -p1
-%patch1 -p1
+%patch -P0 -p1
+%patch -P1 -p1
 %if "%{_lib}" == "lib64"
-%patch2 -p1
+%patch -P2 -p1
 %endif
 
 %build
